@@ -1,0 +1,288 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes:
+    light --default,
+    dark --prefersdark;
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+    --canvas: #f4f6f9;
+    --surface: #ffffff;
+    --surface-hover: #f8faff;
+    --text: #171a21;
+    --text-secondary: #616875;
+    --text-tertiary: #7a8290;
+    --line: #dfe3ea;
+    --line-strong: #c9d0da;
+    --accent: #2563eb;
+    --accent-soft: #e8efff;
+    --primary-bg: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-text: #ffffff;
+    --focus: #2563eb;
+    --danger: #c9342d;
+    font-family:
+      Inter,
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+    background: var(--canvas);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --canvas: #111318;
+      --surface: #1a1d24;
+      --surface-hover: #222630;
+      --text: #f4f6fa;
+      --text-secondary: #b3bac6;
+      --text-tertiary: #929aa8;
+      --line: #303541;
+      --line-strong: #454c5b;
+      --accent: #4f86ff;
+      --accent-soft: #202c48;
+      --primary-bg: #315fcf;
+      --primary-hover: #3a6add;
+      --primary-text: #ffffff;
+      --focus: #77a2ff;
+      --danger: #ff8b84;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    min-width: 344px;
+    background: var(--canvas);
+  }
+
+  button {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .popup-shell {
+    width: 344px;
+    padding: 20px;
+    color: var(--text);
+    background: var(--canvas);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .brand-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand h1,
+  .brand p {
+    margin: 0;
+  }
+
+  .brand h1 {
+    font-size: 15px;
+    font-weight: 680;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+  }
+
+  .brand p {
+    color: var(--text-secondary);
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .page-context {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-block: 1px solid var(--line);
+  }
+
+  .context-icon {
+    display: grid;
+    flex: 0 0 auto;
+    width: 28px;
+    height: 28px;
+    place-items: center;
+    border-radius: 7px;
+    color: var(--accent);
+    background: var(--accent-soft);
+  }
+
+  .context-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .page-copy {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+  }
+
+  .page-copy span,
+  .page-copy strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .page-copy span {
+    color: var(--text-tertiary);
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .page-copy strong {
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+
+  .mode-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .mode-button {
+    display: flex;
+    min-width: 0;
+    height: 118px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 13px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: none;
+    cursor: pointer;
+    touch-action: manipulation;
+    transition:
+      background-color 150ms ease,
+      border-color 150ms ease;
+  }
+
+  .mode-button-primary {
+    color: var(--primary-text);
+    background: var(--primary-bg);
+  }
+
+  .mode-button-primary:hover:not(:disabled) {
+    background: var(--primary-hover);
+  }
+
+  .mode-button-secondary {
+    color: var(--text);
+    border-color: var(--line-strong) !important;
+    background: var(--surface);
+  }
+
+  .mode-button-secondary:hover:not(:disabled) {
+    border-color: var(--accent) !important;
+    background: var(--surface-hover);
+  }
+
+  .mode-button:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  .mode-button:active:not(:disabled) {
+    transition-duration: 60ms;
+  }
+
+  .mode-button:disabled {
+    cursor: default;
+    opacity: 0.45;
+  }
+
+  .mode-visual {
+    display: flex;
+    width: 100%;
+    height: 42px;
+    align-items: flex-start;
+  }
+
+  .mode-visual svg {
+    width: 42px;
+    height: 42px;
+    stroke-width: 1.2;
+  }
+
+  .mode-button-primary .mode-visual {
+    color: rgb(255 255 255 / 86%);
+  }
+
+  .mode-button-secondary .mode-visual {
+    color: var(--accent);
+  }
+
+  .mode-copy {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+  }
+
+  .mode-copy strong,
+  .mode-copy small {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mode-copy strong {
+    font-size: 14px;
+    font-weight: 650;
+    line-height: 18px;
+  }
+
+  .mode-copy small {
+    margin-top: 1px;
+    color: currentColor;
+    font-size: 12px;
+    font-weight: 450;
+    line-height: 16px;
+    opacity: 0.72;
+  }
+
+  .status-message {
+    min-height: 18px;
+    margin: 10px 0 0;
+    color: var(--text-tertiary);
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  .status-error {
+    color: var(--danger);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mode-button {
+    transition: none;
+  }
+}

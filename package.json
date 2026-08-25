@@ -1,0 +1,39 @@
+{
+  "name": "ai-companion",
+  "version": "0.1.0",
+  "description": "把常用 AI 网页放进独立小窗或浏览器侧边栏，浏览时随手调用。",
+  "private": true,
+  "license": "MIT",
+  "packageManager": "pnpm@11.14.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "build": "wxt build",
+    "build:firefox": "wxt build -b firefox",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip -b firefox",
+    "prepare": "wxt prepare",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@wxt-dev/i18n": "^0.2.7",
+    "lucide-react": "^1.29.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.3",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "@wxt-dev/module-react": "1.2.2",
+    "daisyui": "^5.7.21",
+    "tailwindcss": "4.3.3",
+    "typescript": "5.9.2",
+    "vite": "8.2.2",
+    "wxt": "0.21.4"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,29 @@
+extName: AI 伴侣
+extDescription: 把常用 AI 网页放进独立小窗或浏览器侧边栏，浏览、写作与查资料时随手调用。
+actionTitle: AI 伴侣 · 打开 AI 伴侣
+
+popup:
+  documentTitle: AI 伴侣
+  documentDescription: AI 网页，随时在手边
+  currentPage: 当前网页 · $1
+  browser: 浏览器
+  openMethod: 打开方式
+  opening: 正在打开…
+  page:
+    loading: 正在读取…
+    unsupported: 此页面无法在小窗中打开
+  window:
+    title: 独立小窗
+    description: 打开当前网页
+    unavailable: 当前页面不可用
+  sidePanel:
+    title: 侧边栏
+    description: 打开豆包
+  errors:
+    window: 小窗打开失败，请重试。
+    sidePanel: 侧边栏打开失败，请重试。
+
+sidePanel:
+  documentTitle: AI 伴侣 · 豆包侧边栏
+  documentDescription: 在浏览器侧边栏中使用 AI 网页
+  frameTitle: 豆包

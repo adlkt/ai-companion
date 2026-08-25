@@ -1,0 +1,15 @@
+.output/
+.wxt/
+node_modules/
+.pnpm-store/
+*.zip
+
+/spec
+.DS_Store
+.agents
+AGENTS.md
+skills-lock.json
+assets/screenshots/doubao-side-panel.jpg
+.env
+.env.*
+!.env.example

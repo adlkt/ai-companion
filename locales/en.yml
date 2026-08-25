@@ -1,0 +1,29 @@
+extName: AI Companion
+extDescription: Keep the AI websites you already use close while browsing, writing, and researching.
+actionTitle: AI Companion · Open your AI companion
+
+popup:
+  documentTitle: AI Companion
+  documentDescription: Keep AI websites close at hand
+  currentPage: Current page · $1
+  browser: Browser
+  openMethod: Open with
+  opening: Opening…
+  page:
+    loading: Reading current page…
+    unsupported: This page cannot be opened in a popup window
+  window:
+    title: Popup window
+    description: Open the current page
+    unavailable: Unavailable on this page
+  sidePanel:
+    title: Side panel
+    description: Open Doubao
+  errors:
+    window: Could not open the popup window. Please try again.
+    sidePanel: Could not open the side panel. Please try again.
+
+sidePanel:
+  documentTitle: AI Companion · Doubao side panel
+  documentDescription: Use an AI website in the browser side panel
+  frameTitle: Doubao
