@@ -42,6 +42,8 @@ Open the current HTTP(S) page in a separate Chrome popup window from the extensi
 
 ### Doubao side panel
 
+![Using Doubao in the side panel](./assets/screenshots/doubao-side-panel.png)
+
 Open Doubao in Chrome's Side Panel so that the AI website and the page you are browsing can remain side by side.
 
 - Does not create another desktop window.

@@ -41,6 +41,8 @@ ZIP 不能直接拖入 Chrome 安装。手动安装版本也不会自动更新�
 - 小窗可以移动和调整尺寸，但 Chrome 扩展无法保证它始终置顶。
 
 ### 豆包侧边栏
+![在侧边栏中使用 豆包](./assets/screenshots/doubao-side-panel.png)
+
 
 在当前 Chrome 窗口右侧的 Side Panel 中打开豆包，使 AI 与正在浏览的网页并排显示。
 
