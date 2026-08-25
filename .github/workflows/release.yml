@@ -43,6 +43,7 @@ jobs:
           name: ai-companion-chrome
           path: .output/*-chrome.zip
           if-no-files-found: error
+          include-hidden-files: true
 
       - name: Attach package to GitHub Release
         if: startsWith(github.ref, 'refs/tags/v')
